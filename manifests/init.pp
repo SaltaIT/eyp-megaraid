@@ -29,6 +29,11 @@ class megaraid($basedir=$megacli::params::basedir_default)
     require => Exec["mkdir megaraid ${basedir}"],
   }
 
+  file { "${basedir}/libstorelibir-2.so":
+    ensure  => "${basedir}/libstorelibir-2.so.14.07-0",
+    require => File["${basedir}/libstorelibir-2.so.14.07-0"],
+  }
+
   case $::hardwaremodel
   {
     'x86_64':
@@ -39,7 +44,12 @@ class megaraid($basedir=$megacli::params::basedir_default)
         group   => 'root',
         mode    => '0755',
         source  => "puppet:///modules/${module_name}/MegaCli64",
-        require => File["${basedir}/libstorelibir-2.so.14.07-0"],
+        require => File[
+                        [
+                            "${basedir}/libstorelibir-2.so.14.07-0",
+                            "${basedir}/libstorelibir-2.so"
+                        ]
+                      ],
       }
 
       file { "${basedir}/MegaCli":
@@ -56,7 +66,12 @@ class megaraid($basedir=$megacli::params::basedir_default)
         group   => 'root',
         mode    => '0755',
         source  => "puppet:///modules/${module_name}/MegaCli",
-        require => File["${basedir}/libstorelibir-2.so.14.07-0"],
+        require => File[
+                        [
+                            "${basedir}/libstorelibir-2.so.14.07-0",
+                            "${basedir}/libstorelibir-2.so"
+                        ]
+                      ],
       }
     }
     default:
