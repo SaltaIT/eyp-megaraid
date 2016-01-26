@@ -1,0 +1,14 @@
+{
+  "Gemfile": "dbc1a15e3a264c03878028240cfc5d89",
+  "README.md": "25777290b5946e132dd0fc394ef87455",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "files/MegaCli": "7dec96c57cfae517f16a5153df53f369",
+  "files/MegaCli64": "bb49786cd46f4034b33c126a6dd4f4ca",
+  "files/libstorelibir-2.so.14.07-0": "da047698fe969e1feab2dd6e0998c88e",
+  "lib/facter/has_megaraid.rb": "9cc964929e47ceb011bdf6d0be6cf17d",
+  "manifests/init.pp": "716f68126c453db2030915902e8af481",
+  "metadata.json": "f24400e66a0c08cc4b65fc00ed29f5bf",
+  "spec/classes/init_spec.rb": "b5751c662276af681fc14ef49b9dad2d",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+  "tests/init.pp": "ef45453e0123acd77deb254266c071f7"
+}
