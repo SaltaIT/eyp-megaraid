@@ -1,7 +1,8 @@
 # == Class: megaraid
 #
-class megaraid($basedir=$megacli::params::basedir_default)
-      inherits megaraid::params{
+class megaraid(
+                $basedir=$megaraid::params::basedir_default
+              )  inherits megaraid::params{
 
   Exec {
     path => '/usr/sbin:/usr/bin:/sbin:/bin',
