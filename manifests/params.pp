@@ -8,7 +8,7 @@ class megaraid::params {
     {
       case $::operatingsystemrelease
       {
-        /^[5.7].*/:
+        /^[5-7].*/:
         {
         }
         default: { fail('Unsupported RHEL/CentOS version!')  }
